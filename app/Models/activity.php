@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class activity extends Model
+class Activity extends Model
 {
     use HasFactory;
 
 
     public function activity_trip()
 {
-  return $this->hasMany(activity_trip::class);
+  return $this->hasMany(Activity_Trip::class);
+}
+
+public function users(){
+  return $this->belongsToMany(User::class,'activities_users');
 }
 }

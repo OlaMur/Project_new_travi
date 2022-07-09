@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class daily_program extends Model
+class Daily_Program extends Model
 {
     use HasFactory;
     protected $fillable =

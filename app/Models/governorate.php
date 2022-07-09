@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class governorate extends Model
+class Governorate extends Model
 {
     use HasFactory;
 
@@ -16,6 +16,6 @@ class governorate extends Model
 // }
 public function governorate_trip()
 {
-  return $this->hasMany(governorate_trip::class);
+  return $this->hasMany(Governorate_Trip::class);
 }
 }

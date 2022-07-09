@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class area extends Model
+class Area extends Model
 {
     use HasFactory;
 
@@ -17,6 +17,6 @@ class area extends Model
 ];
     public function area_trip()
 {
-  return $this->hasMany(area_trip::class);
+  return $this->hasMany(Area_Trip::class);
 }
 }

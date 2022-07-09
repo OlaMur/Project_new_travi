@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('activity_trips', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('activity-id')->unsigned();
-            $table->integer('trip-id')->unsigned();
+            $table->integer('activity_id')->unsigned();
+            $table->integer('trip_id')->unsigned();
             $table->timestamps();
         });
     }

@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('places', function (Blueprint $table) {
+        Schema::create('activities_users', function (Blueprint $table) {
             $table->increments('id');
-         //   $table->foreignId(column:'منطقة-id')->constrained()->cascadeOnDelete(); 
-         $table->integer('area-id')->unsigned();
-            $table->string('name');
+            $table->integer('user_id')->unsigned();
 
-            $table->string('image')->nullable();
-            //هذا مربوط بالمناطق
-            $table->timestamps();
+            $table->integer('activity_id')->unsigned();
+        
+          
+        
         });
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places');
+        Schema::dropIfExists('activities_users');
     }
 };

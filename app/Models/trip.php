@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class trip extends Model
+class Trip extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -37,23 +37,23 @@ public function user()
 // }
 public function daily_program()
 {
-  return $this->hasOne(daily_program::class);
+  return $this->hasOne(Daily_Program::class);
 }
 public function governorate()
 {
-  return $this->hasMany(governorate_trip::class);
+  return $this->hasMany(Governorate_Trip::class);
 }
 public function state()
 {
-  return $this->hasMany(state_trip::class);
+  return $this->hasMany(State_Trip::class);
 }
 public function area()
 {
-  return $this->hasMany(area_trip::class);
+  return $this->hasMany(Area_Trip::class);
 }
 public function activity()
 {
-  return $this->hasMany(activity_trip::class);
+  return $this->hasMany(Activity_Trip::class);
 }
 
 

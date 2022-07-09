@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Trip;
-use App\Models\Governement;
-
+use App\Models\state;
 use Illuminate\Http\Request;
 
-class TripController extends Controller
+class StateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +24,7 @@ class TripController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -37,21 +35,16 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        $governement=new Governement;
-        $governement->name=$request->name;
-        $governement->save();
-        $trip=new Trip;
-        $trip->governorate_id= $governement->id;
-        return  $trip;
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Trip  $trip
+     * @param  \App\Models\state  $state
      * @return \Illuminate\Http\Response
      */
-    public function show(Trip $trip)
+    public function show(state $state)
     {
         //
     }
@@ -59,10 +52,10 @@ class TripController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Trip  $trip
+     * @param  \App\Models\state  $state
      * @return \Illuminate\Http\Response
      */
-    public function edit(Trip $trip)
+    public function edit(state $state)
     {
         //
     }
@@ -71,10 +64,10 @@ class TripController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Trip  $trip
+     * @param  \App\Models\state  $state
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Trip $trip)
+    public function update(Request $request, state $state)
     {
         //
     }
@@ -82,10 +75,10 @@ class TripController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Trip  $trip
+     * @param  \App\Models\state  $state
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Trip $trip)
+    public function destroy(state $state)
     {
         //
     }

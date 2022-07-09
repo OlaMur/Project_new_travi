@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('state_trips', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('state-id')->unsigned();
-            $table->integer('trip-id')->unsigned();
+            $table->integer('state_id')->unsigned();
+            $table->integer('trip_id')->unsigned();
             $table->timestamps();
         });
     }

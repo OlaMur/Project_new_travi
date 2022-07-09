@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class governorate_trip extends Model
+class Governorate_Trip extends Model
 {
     use HasFactory;
 
     public function trip()
     {
-      return $this->belongsTo(trip::class);
+      return $this->belongsTo(Trip::class);
     }
     public function governorate()
     {
-      return $this->belongsTo(governorate::class);
+      return $this->belongsTo(Governorate::class);
     }
 }

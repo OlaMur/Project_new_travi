@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('area_trips', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('area-id')->unsigned();
-            $table->integer('trip-id')->unsigned();
+            $table->integer('area_id')->unsigned();
+            $table->integer('trip_id')->unsigned();
             $table->timestamps();
         });
     }

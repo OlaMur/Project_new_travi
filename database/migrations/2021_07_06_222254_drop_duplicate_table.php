@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class DropDuplicateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('governement_trips', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('governement_id')->unsigned();
-            $table->integer('trip_id')->unsigned();
-            $table->timestamps();
-        });
+       Schema::drop('activities_users');
     }
 
     /**
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('governorate_trips');
+        //
     }
-};
+}

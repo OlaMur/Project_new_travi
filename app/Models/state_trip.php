@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class state_trip extends Model
+class State_Trip extends Model
 {
     use HasFactory;
     public function trip()
     {
-      return $this->belongsTo(trip::class);
+      return $this->belongsTo(Trip::class);
     }
     public function state()
 {
-  return $this->belongsTo(state::class);
+  return $this->belongsTo(State::class);
 }
 
 }
